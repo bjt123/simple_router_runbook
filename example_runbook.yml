@@ -1,0 +1,14 @@
+- LogToFile: health_check_{year}_{month}_{day}_{hour}_{minute}_{second}.txt
+- ConnectTo: vsim1
+- Exec:
+  - show time
+- Print: Checking Inventory on {hostname} at {year}/{month}/{day} {hour}:{minute}:{second}
+- Exec:
+  - show card
+  - show mda  
+- Print: Next, sleep the Runbook for 5 seconds
+- Sleep: 5
+- Print: Next, pause script until enter is pressed
+- Pause: Pausing Script
+
+  
